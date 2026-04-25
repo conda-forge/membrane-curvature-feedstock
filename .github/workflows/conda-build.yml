@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build:
-    name: ${{ matrix.CONFIG }}
+    name: Build conda package (${{ matrix.os }})
     runs-on: ${{ matrix.runs_on }}
     timeout-minutes: 360
     strategy:

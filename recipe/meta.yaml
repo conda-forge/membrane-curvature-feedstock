@@ -1,5 +1,7 @@
 {% set name = "membrane-curvature" %}
 {% set version = "1.1.2" %}
+{% set python_min = "3.11" %}
+
 
 package:
   name: {{ name|lower }}
@@ -12,16 +14,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - versioningit
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - numpy >=1.20.0
     - mdanalysis >=2.0.0
 
@@ -32,6 +34,7 @@ test:
     - pip check
     - pytest
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
   source_files:
