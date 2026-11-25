@@ -24,8 +24,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - numpy >=1.20.0
-    - mdanalysis >=2.0.0
+    - numpy >=1.23.0
+    - mdanalysis >=2.4.0
 
 test:
   imports:
@@ -43,7 +43,7 @@ test:
 about:
   home: https://github.com/MDAnalysis/membrane-curvature
   summary: MDAnalysis tool to calculate membrane curvature from MD simulations.
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   license_file: LICENSE
   doc_url: https://membrane-curvature.readthedocs.io/
   dev_url: https://github.com/MDAnalysis/membrane-curvature
